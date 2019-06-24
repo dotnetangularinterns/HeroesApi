@@ -28,7 +28,8 @@ namespace HeroesApi.Controllers
             if (name == null)
             {
                 return Ok(service.GetHeroes());
-            } else
+            }
+            else
             {
                 return Ok(service.SearchHeroes(name));
             }
