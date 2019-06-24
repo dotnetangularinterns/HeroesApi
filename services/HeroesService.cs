@@ -7,7 +7,7 @@ using Newtonsoft.Json;
 
 namespace HeroesApi.services
 {
-    class HeroesService : IHeroesService
+    public class HeroesService : IHeroesService
     {
 
         private readonly string data_path = System.IO.Directory.GetCurrentDirectory() + "\\data\\heroes.json";
@@ -104,7 +104,7 @@ namespace HeroesApi.services
             return heroes[x];
         }
 
-        public void save()
+        private void save()
         {
             string json = JsonConvert.SerializeObject(heroes.ToArray());
             System.IO.File.WriteAllText(data_path, json);
