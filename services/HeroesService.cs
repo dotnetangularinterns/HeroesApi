@@ -29,7 +29,7 @@ namespace HeroesApi.services
 
         public int GenerateId()
         {
-            int max = 1;
+            int max = 0;
             foreach (Hero hero in heroes)
             {
                 int id = hero.Id;
